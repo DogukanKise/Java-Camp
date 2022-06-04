@@ -2,14 +2,18 @@
 public class Main {
 
 	public static void main(String[] args) {
-		Lessons lesson1 = new Lessons(1, "Java Courses", "Java with Spring", "Engin Demirog", (float) 0.5);
-		Category category1 = new Category(1,"Programming");
+		UserManager userManager = new UserManager();
+		StudentManager manager = new StudentManager();
+		Instructor instructor = new Instructor();
+		Student student = new Student();
 		
-		LessonManager lessonManager = new LessonManager();
-		lessonManager.GetName(lesson1);
+		instructor.setId(5);
+		userManager.add(instructor);
+		String[] lessons = {"Math","Physics","Sport","Coding"};
+		String[] linkedAccounts = {"Github","Linkedin","Stackoverflow","Facebook"};
 		
-		CategoryManager categoryManager = new CategoryManager();
-		categoryManager.GetName(category1);
+		manager.addLesson(linkedAccounts);
+		userManager.addLesson(lessons);
 		
 	}
 
